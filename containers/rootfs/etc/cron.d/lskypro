@@ -1,0 +1,1 @@
+* * * * * root /usr/local/sbin/php /var/www/lsky-pro/artisan schedule:run

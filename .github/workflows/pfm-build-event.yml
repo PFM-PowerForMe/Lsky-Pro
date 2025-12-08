@@ -1,0 +1,11 @@
+name: "PFM-Build 触发"
+
+on:
+  repository_dispatch:
+    types: [pfm-build-event]
+
+jobs:
+  Call-next-workflow:
+    permissions: write-all
+    uses: ./.github/workflows/custom-container-build.yml
+    secrets: inherit

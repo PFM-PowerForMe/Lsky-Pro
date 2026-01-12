@@ -1,6 +1,6 @@
 #!/command/with-contenv sh
 
-QUEUE_PID=$(pgrep -f "/usr/local/sbin/php /var/www/lsky-pro/artisan queue:work")
+QUEUE_PID=$(pgrep -f "/usr/local/sbin/php /var/www/lsky-pro/artisan queue:work --queue=emails,images,thumbnails")
 if [ -z "$QUEUE_PID" ]; then
     echo "❎ QUEUE STOP."
     exit 1
